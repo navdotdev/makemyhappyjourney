@@ -1,0 +1,729 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make My Journey Happy - Spiritual Tours & Travel Across India</title>
+    <meta name="description" content="Discover spiritual and cultural journeys across India with RAM Circuit, Buddha Circuit, and Shiva Circuit tours. Book hotels, flights, and complete travel packages.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6B35',
+                        secondary: '#2D3748',
+                        accent: '#F7931E',
+                        neutral: {
+                            50: '#F7FAFC',
+                            100: '#EDF2F7',
+                            600: '#718096'
+                        }
+                    },
+                    fontFamily: {
+                        'heading': ['Inter', 'sans-serif'],
+                        'body': ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .three-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .content-overlay {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="font-body bg-neutral-50">
+
+<!-- @COMPONENT: Navigation -->
+<nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
+                    <i class="fas fa-lotus text-white text-lg"></i>
+                </div>
+                <span class="font-heading font-bold text-xl text-secondary">Make My Journey Happy</span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-secondary hover:text-primary transition-colors">Home</a>
+                <a href="#packages" class="text-secondary hover:text-primary transition-colors">Tour Packages</a>
+                <a href="#states" class="text-secondary hover:text-primary transition-colors">Destinations</a>
+                <a href="#services" class="text-secondary hover:text-primary transition-colors">Services</a>
+                <a href="#contact" class="text-secondary hover:text-primary transition-colors">Contact</a>
+                <button class="bg-primary text-white px-6 py-2 rounded-full hover:bg-orange-600 transition-colors">
+                    Book Now
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-secondary">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+<!-- @END_COMPONENT: Navigation -->
+
+<!-- @COMPONENT: Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden">
+    <!-- 3D Background Canvas -->
+    <!-- @FUNCTIONALITY: This should implement Three.js temple and dome architectures with dynamic lighting -->
+    <canvas id="three-canvas" class="three-canvas"></canvas>
+    
+    <div class="hero-gradient absolute inset-0 opacity-90"></div>
+    
+    <div class="content-overlay container mx-auto px-4 text-white">
+        <div class="max-w-4xl">
+            <h1 class="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Discover Sacred
+                <span class="block text-accent">India</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-2xl">
+                Embark on spiritual journeys across India with our expertly crafted RAM, Buddha, and Shiva circuits. Experience divine destinations with comfort and authenticity.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button class="bg-white text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-neutral-100 transition-colors">
+                    Explore Packages
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary transition-colors">
+                    Plan Your Journey
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+        <i class="fas fa-chevron-down text-2xl"></i>
+    </div>
+</section>
+<!-- @END_COMPONENT: Hero Section -->
+
+<!-- @COMPONENT: States Carousel -->
+<section id="states" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-secondary mb-4">
+                Explore Sacred Destinations
+            </h2>
+            <p class="text-xl text-neutral-600 max-w-2xl mx-auto">
+                Journey through India's most spiritual states and discover ancient temples, holy rivers, and divine experiences.
+            </p>
+        </div>
+        
+        <!-- States Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- @MAP: states.map(state => ( -->
+            
+            <!-- Uttar Pradesh -->
+            <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
+                <!-- Scenic view of Varanasi ghats along the Ganges river with traditional boats -->
+                <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                     alt="Varanasi ghats in Uttar Pradesh" 
+                     class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-heading text-xl font-semibold text-secondary mb-2">Uttar Pradesh</h3>
+                    <p class="text-neutral-600 mb-4">Varanasi, Ayodhya, Mathura, Vrindavan</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-primary font-semibold">15+ Destinations</span>
+                        <button class="text-primary hover:text-orange-600 transition-colors">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bihar -->
+            <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
+                <!-- Ancient Buddhist temple complex in Bodh Gaya with prayer flags -->
+                <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                     alt="Bodh Gaya temple in Bihar" 
+                     class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-heading text-xl font-semibold text-secondary mb-2">Bihar</h3>
+                    <p class="text-neutral-600 mb-4">Bodh Gaya, Nalanda, Rajgir, Patna</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-primary font-semibold">8+ Destinations</span>
+                        <button class="text-primary hover:text-orange-600 transition-colors">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Himachal Pradesh -->
+            <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
+                <!-- Majestic Himalayan temple with snow-capped mountains in background -->
+                <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                     alt="Himalayan temple in Himachal Pradesh" 
+                     class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-heading text-xl font-semibold text-secondary mb-2">Himachal Pradesh</h3>
+                    <p class="text-neutral-600 mb-4">Dharamshala, Manali, Shimla</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-primary font-semibold">12+ Destinations</span>
+                        <button class="text-primary hover:text-orange-600 transition-colors">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Uttarakhand -->
+            <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
+                <!-- Sacred river Ganges flowing through Rishikesh with ashrams visible -->
+                <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                     alt="Rishikesh on river Ganges in Uttarakhand" 
+                     class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-heading text-xl font-semibold text-secondary mb-2">Uttarakhand</h3>
+                    <p class="text-neutral-600 mb-4">Rishikesh, Haridwar, Kedarnath</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-primary font-semibold">10+ Destinations</span>
+                        <button class="text-primary hover:text-orange-600 transition-colors">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- @END_MAP -->
+        </div>
+    </div>
+</section>
+<!-- @END_COMPONENT: States Carousel -->
+
+<!-- @COMPONENT: Tour Packages -->
+<section id="packages" class="py-20 bg-neutral-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-secondary mb-4">
+                Sacred Circuit Packages
+            </h2>
+            <p class="text-xl text-neutral-600 max-w-2xl mx-auto">
+                Choose from our specially curated spiritual circuits designed to provide authentic experiences of India's divine heritage.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- RAM Circuit -->
+            <div class="card-hover bg-white rounded-3xl shadow-xl overflow-hidden">
+                <!-- Ancient Ram temple with ornate architecture and devotees -->
+                <img src="https://images.unsplash.com/photo-1609920658906-8223bd289001?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                     alt="Ram temple with traditional architecture" 
+                     class="w-full h-64 object-cover">
+                <div class="p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-mountain text-white text-lg"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-secondary">RAM Circuit</h3>
+                    </div>
+                    <p class="text-neutral-600 mb-6">
+                        Experience the divine journey of Lord Rama through Ayodhya, Chitrakoot, and other sacred places mentioned in the Ramayana.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-neutral-600">
+                            <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                            Ayodhya, Chitrakoot, Nasik, Hampi
+                        </div>
+                        <div class="flex items-center text-sm text-neutral-600">
+                            <i class="fas fa-calendar text-primary mr-2"></i>
+                            7 Days / 6 Nights
+                        </div>
+                        <div class="flex items-center text-sm text-neutral-600">
+                            <i class="fas fa-users text-primary mr-2"></i>
+                            All meals & accommodation
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-3xl font-bold text-secondary">₹45,999</span>
+                            <span class="text-sm text-neutral-600">/person</span>
+                        </div>
+                        <button class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Buddha Circuit -->
+            <div class="card-hover bg-white rounded-3xl shadow-xl overflow-hidden relative">
+                <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
+                    Most Popular
+                </div>
+                <!-- Peaceful Buddha statue in meditation pose with lotus flowers -->
+                <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                     alt="Buddha statue in meditation with lotus" 
+                     class="w-full h-64 object-cover">
+                <div class="p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-peace text-white text-lg"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-secondary">Buddha Circuit</h3>
+                    </div>
+                    <p class="text-neutral-600 mb-6">
+                        Follow the enlightened path of Buddha through Bodh Gaya, Sarnath, Kushinagar, and other places where he lived and taught.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-neutral-600">
+                            <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                            Bodh Gaya, Sarnath, Kushinagar, Rajgir
+                        </div>
+                        <div class="flex items-center text-sm text-neutral-600">
+                            <i class="fas fa-calendar text-primary mr-2"></i>
+                            8 Days / 7 Nights
+                        </div>
+                        <div class="flex items-center text-sm text-neutral-600">
+                            <i class="fas fa-users text-primary mr-2"></i>
+                            Meditation sessions included
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-3xl font-bold text-secondary">₹52,999</span>
+                            <span class="text-sm text-neutral-600">/person</span>
+                        </div>
+                        <button class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shiva Circuit -->
+            <div class="card-hover bg-white rounded-3xl shadow-xl overflow-hidden">
+                <!-- Majestic Shiva temple with traditional sculptures and devotees -->
+                <img src="https://pixabay.com/get/g4935bee4645320c66baf87bd40d660d13950dbc5da4341f0ee8b4d65e5ff4fc99542d39d15ca32be59b678d8e627a0e233585736856a7e22abe5d3434007c208_1280.jpg" 
+                     alt="Ancient Shiva temple with intricate carvings" 
+                     class="w-full h-64 object-cover">
+                <div class="p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-om text-white text-lg"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-secondary">Shiva Circuit</h3>
+                    </div>
+                    <p class="text-neutral-600 mb-6">
+                        Discover the power of Lord Shiva through the 12 Jyotirlingas and other sacred shrines dedicated to the destroyer and transformer.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-neutral-600">
+                            <i class="fas fa-map-marker-alt text-primary mr-2"></i>
+                            Kashi, Kedarnath, Somnath, Ujjain
+                        </div>
+                        <div class="flex items-center text-sm text-neutral-600">
+                            <i class="fas fa-calendar text-primary mr-2"></i>
+                            10 Days / 9 Nights
+                        </div>
+                        <div class="flex items-center text-sm text-neutral-600">
+                            <i class="fas fa-users text-primary mr-2"></i>
+                            Jyotirlinga darshan tour
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-3xl font-bold text-secondary">₹65,999</span>
+                            <span class="text-sm text-neutral-600">/person</span>
+                        </div>
+                        <button class="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @END_COMPONENT: Tour Packages -->
+
+<!-- @COMPONENT: Services -->
+<section id="services" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-secondary mb-4">
+                Complete Travel Solutions
+            </h2>
+            <p class="text-xl text-neutral-600 max-w-2xl mx-auto">
+                From flights to accommodations, we handle every detail of your spiritual journey with care and expertise.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Flight Booking -->
+            <div class="text-center group">
+                <div class="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-plane text-white text-2xl"></i>
+                </div>
+                <h3 class="font-heading text-xl font-semibold text-secondary mb-2">Flight Booking</h3>
+                <p class="text-neutral-600 text-sm">Domestic and international flight reservations with best prices</p>
+            </div>
+            
+            <!-- Train Reservations -->
+            <div class="text-center group">
+                <div class="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-train text-white text-2xl"></i>
+                </div>
+                <h3 class="font-heading text-xl font-semibold text-secondary mb-2">Train Reservations</h3>
+                <p class="text-neutral-600 text-sm">Confirmed railway bookings across India with preferred berths</p>
+            </div>
+            
+            <!-- Hotel Booking -->
+            <div class="text-center group">
+                <div class="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-hotel text-white text-2xl"></i>
+                </div>
+                <h3 class="font-heading text-xl font-semibold text-secondary mb-2">Hotel Booking</h3>
+                <p class="text-neutral-600 text-sm">Comfortable accommodations near pilgrimage sites</p>
+            </div>
+            
+            <!-- Transport -->
+            <div class="text-center group">
+                <div class="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-car text-white text-2xl"></i>
+                </div>
+                <h3 class="font-heading text-xl font-semibold text-secondary mb-2">Transportation</h3>
+                <p class="text-neutral-600 text-sm">Private vehicles and local transport arrangements</p>
+            </div>
+            
+            <!-- Visa Assistance -->
+            <div class="text-center group">
+                <div class="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-passport text-white text-2xl"></i>
+                </div>
+                <h3 class="font-heading text-xl font-semibold text-secondary mb-2">Visa Assistance</h3>
+                <p class="text-neutral-600 text-sm">Documentation and visa processing support</p>
+            </div>
+            
+            <!-- Travel Insurance -->
+            <div class="text-center group">
+                <div class="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-shield-alt text-white text-2xl"></i>
+                </div>
+                <h3 class="font-heading text-xl font-semibold text-secondary mb-2">Travel Insurance</h3>
+                <p class="text-neutral-600 text-sm">Comprehensive coverage for worry-free journeys</p>
+            </div>
+            
+            <!-- 24/7 Support -->
+            <div class="text-center group">
+                <div class="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-headset text-white text-2xl"></i>
+                </div>
+                <h3 class="font-heading text-xl font-semibold text-secondary mb-2">24/7 Support</h3>
+                <p class="text-neutral-600 text-sm">Round-the-clock assistance during your travel</p>
+            </div>
+            
+            <!-- Custom Packages -->
+            <div class="text-center group">
+                <div class="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-route text-white text-2xl"></i>
+                </div>
+                <h3 class="font-heading text-xl font-semibold text-secondary mb-2">Custom Packages</h3>
+                <p class="text-neutral-600 text-sm">Tailored itineraries based on your preferences</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @END_COMPONENT: Services -->
+
+<!-- @COMPONENT: Contact Form -->
+<section id="contact" class="py-20 bg-neutral-50">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <!-- Contact Info -->
+            <div>
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-secondary mb-6">
+                    Start Your Sacred Journey
+                </h2>
+                <p class="text-xl text-neutral-600 mb-8">
+                    Get in touch with our travel experts to plan your perfect spiritual adventure across India. We're here to make your journey memorable and meaningful.
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-phone text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-secondary">Phone</h4>
+                            <p class="text-neutral-600">+91 98765 43210</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-envelope text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-secondary">Email</h4>
+                            <p class="text-neutral-600">info@makemyjourneyhappy.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-secondary">Office</h4>
+                            <p class="text-neutral-600">New Delhi, India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="bg-white rounded-3xl shadow-xl p-8">
+                <form class="space-y-6" data-implementation="Should validate form before submission">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-secondary mb-2">First Name</label>
+                            <input type="text" 
+                                   class="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" 
+                                   placeholder="Enter your first name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-secondary mb-2">Last Name</label>
+                            <input type="text" 
+                                   class="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" 
+                                   placeholder="Enter your last name">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-secondary mb-2">Email Address</label>
+                        <input type="email" 
+                               class="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" 
+                               placeholder="Enter your email address">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-secondary mb-2">Phone Number</label>
+                        <input type="tel" 
+                               class="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" 
+                               placeholder="Enter your phone number">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-secondary mb-2">Preferred Circuit</label>
+                        <select class="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                            <option>Select a circuit</option>
+                            <option>RAM Circuit</option>
+                            <option>Buddha Circuit</option>
+                            <option>Shiva Circuit</option>
+                            <option>Custom Package</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-secondary mb-2">Message</label>
+                        <textarea rows="4" 
+                                  class="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" 
+                                  placeholder="Tell us about your travel preferences and requirements"></textarea>
+                    </div>
+                    
+                    <button type="submit" 
+                            class="w-full bg-primary text-white py-4 rounded-xl font-semibold text-lg hover:bg-orange-600 transition-colors">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @END_COMPONENT: Contact Form -->
+
+<!-- @COMPONENT: Footer -->
+<footer class="bg-secondary text-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Company Info -->
+            <div>
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
+                        <i class="fas fa-lotus text-white text-lg"></i>
+                    </div>
+                    <span class="font-heading font-bold text-xl">Make My Journey Happy</span>
+                </div>
+                <p class="text-neutral-300 mb-4">
+                    Your trusted partner for spiritual and cultural journeys across India. Experience the divine with comfort and authenticity.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-heading text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="text-neutral-300 hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="#packages" class="text-neutral-300 hover:text-primary transition-colors">Tour Packages</a></li>
+                    <li><a href="#states" class="text-neutral-300 hover:text-primary transition-colors">Destinations</a></li>
+                    <li><a href="#services" class="text-neutral-300 hover:text-primary transition-colors">Services</a></li>
+                    <li><a href="#contact" class="text-neutral-300 hover:text-primary transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Circuits -->
+            <div>
+                <h4 class="font-heading text-lg font-semibold mb-4">Sacred Circuits</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-neutral-300 hover:text-primary transition-colors">RAM Circuit</a></li>
+                    <li><a href="#" class="text-neutral-300 hover:text-primary transition-colors">Buddha Circuit</a></li>
+                    <li><a href="#" class="text-neutral-300 hover:text-primary transition-colors">Shiva Circuit</a></li>
+                    <li><a href="#" class="text-neutral-300 hover:text-primary transition-colors">Custom Packages</a></li>
+                    <li><a href="#" class="text-neutral-300 hover:text-primary transition-colors">Group Tours</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Info -->
+            <div>
+                <h4 class="font-heading text-lg font-semibold mb-4">Contact Info</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone text-primary mr-3"></i>
+                        <span class="text-neutral-300">+91 98765 43210</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-primary mr-3"></i>
+                        <span class="text-neutral-300">info@makemyjourneyhappy.com</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-primary mr-3"></i>
+                        <span class="text-neutral-300">New Delhi, India</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-neutral-700 mt-12 pt-8 text-center">
+            <p class="text-neutral-300">
+                © 2025 Make My Journey Happy. All rights reserved. | 
+                <a href="#" class="text-primary hover:text-orange-400 transition-colors">Privacy Policy</a> | 
+                <a href="#" class="text-primary hover:text-orange-400 transition-colors">Terms of Service</a>
+            </p>
+        </div>
+    </div>
+</footer>
+<!-- @END_COMPONENT: Footer -->
+
+<!-- Windows Development Fix Notice -->
+<div id="dev-notice" class="fixed bottom-4 right-4 bg-red-500 text-white p-4 rounded-lg shadow-lg max-w-sm z-50" style="display: none;">
+    <div class="flex items-start">
+        <i class="fas fa-exclamation-triangle mr-3 mt-1"></i>
+        <div>
+            <h4 class="font-semibold mb-1">Windows Development Fix</h4>
+            <p class="text-sm mb-2">To fix the npm dev command, update package.json:</p>
+            <code class="text-xs bg-red-600 p-1 rounded block">
+                "dev": "cross-env NODE_ENV=development tsx server/index.ts"
+            </code>
+            <p class="text-xs mt-1">Install: npm install --save-dev cross-env</p>
+        </div>
+        <button onclick="document.getElementById('dev-notice').style.display='none'" class="ml-2 text-white hover:text-red-200">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+</div>
+
+<script>
+    // Development notice for Windows compatibility
+    if (navigator.platform.includes('Win')) {
+        setTimeout(() => {
+            document.getElementById('dev-notice').style.display = 'block';
+        }, 2000);
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // Three.js Scene Setup (Basic structure - needs full Three.js implementation)
+    // TODO: Implement Three.js temple and dome architectures with dynamic lighting
+    function initThreeJS() {
+        const canvas = document.getElementById('three-canvas');
+        if (!canvas) return;
+        
+        // Placeholder for Three.js implementation
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            // Simple gradient as placeholder for 3D scene
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, 'rgba(255, 107, 53, 0.1)');
+            gradient.addColorStop(1, 'rgba(247, 147, 30, 0.1)');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        }
+    }
+
+    // Contact form handling
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // TODO: Implement form validation and submission
+        alert('Thank you for your inquiry! We will contact you soon.');
+    });
+
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', function() {
+        initThreeJS();
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        initThreeJS();
+    });
+</script>
+
+</body>
+</html>
