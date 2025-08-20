@@ -9,10 +9,7 @@ const packages = [
     icon: Mountain,
     description: "Experience the divine journey of Lord Rama through Ayodhya, Chitrakoot, and other sacred places mentioned in the Ramayana.",
     destinations: "Ayodhya, Chitrakoot, Nasik, Hampi",
-    duration: "7 Days / 6 Nights",
-    includes: "All meals & accommodation",
-    price: "₹45,999",
-    image: "https://images.unsplash.com/photo-1609920658906-8223bd289001?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+    image: "https://github.com/Jatind13/Assets-at-NavDotDev/blob/29e2b6f8368d24947cc354ef8c8085a0fcaf249e/ChatGPT%20Image%20Aug%2020%2C%202025%2C%2007_43_05%20PM.png",
     alt: "Ram temple with traditional architecture"
   },
   {
@@ -20,9 +17,6 @@ const packages = [
     icon: Heart,
     description: "Follow the enlightened path of Buddha through Bodh Gaya, Sarnath, Kushinagar, and other places where he lived and taught.",
     destinations: "Bodh Gaya, Sarnath, Kushinagar, Rajgir",
-    duration: "8 Days / 7 Nights",
-    includes: "Meditation sessions included",
-    price: "₹52,999",
     image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
     alt: "Buddha statue in meditation with lotus",
     popular: true
@@ -32,9 +26,6 @@ const packages = [
     icon: Sun,
     description: "Discover the power of Lord Shiva through the 12 Jyotirlingas and other sacred shrines dedicated to the destroyer and transformer.",
     destinations: "Kashi, Kedarnath, Somnath, Ujjain",
-    duration: "10 Days / 9 Nights",
-    includes: "Jyotirlinga darshan tour",
-    price: "₹65,999",
     image: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
     alt: "Ancient Shiva temple with intricate carvings"
   }
@@ -94,20 +85,8 @@ export default function TourPackages() {
                       <MapPin className="text-primary mr-2 h-4 w-4" />
                       {pkg.destinations}
                     </div>
-                    <div className="flex items-center text-sm text-neutral-600">
-                      <Calendar className="text-primary mr-2 h-4 w-4" />
-                      {pkg.duration}
-                    </div>
-                    <div className="flex items-center text-sm text-neutral-600">
-                      <Users className="text-primary mr-2 h-4 w-4" />
-                      {pkg.includes}
-                    </div>
                   </div>
                   <div className="flex items-center justify-between">
-                    <div>
-                      <span className="text-3xl font-bold text-secondary">{pkg.price}</span>
-                      <span className="text-sm text-neutral-600">/person</span>
-                    </div>
                     <Button 
                       onClick={scrollToContact}
                       className="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors"

@@ -23,7 +23,7 @@ export default function HeroSection() {
         <div className="max-w-4xl">
           <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Discover Sacred
-            <span className="block text-accent">India</span>
+            <span className="block">India</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-2xl">
             Embark on spiritual journeys across India with our expertly crafted RAM, Buddha, and Shiva circuits. Experience divine destinations with comfort and authenticity.
@@ -37,8 +37,7 @@ export default function HeroSection() {
             </Button>
             <Button 
               onClick={() => scrollToSection("contact")}
-              variant="outline"
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary transition-colors"
+              className="bg-white text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-neutral-100 transition-colors"
             >
               Plan Your Journey
             </Button>
