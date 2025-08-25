@@ -7,28 +7,28 @@ const states = [
     name: "Uttar Pradesh",
     destinations: "Varanasi, Ayodhya, Mathura, Vrindavan",
     count: "15+ Destinations",
-    image: "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image :"https://Jatind13.github.io/Assets-at-NavDotDev/ChatGPT%20Image%20Aug%2020%2C%202025%2C%2007_43_05%20PM.png",
     alt: "Varanasi ghats in Uttar Pradesh"
   },
   {
     name: "Bihar",
     destinations: "Bodh Gaya, Nalanda, Rajgir, Patna",
     count: "8+ Destinations",
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image :"https://Jatind13.github.io/Assets-at-NavDotDev/ChatGPT%20Image%20Aug%2020%2C%202025%2C%2007_47_11%20PM.png",
     alt: "Bodh Gaya temple in Bihar"
   },
   {
     name: "Himachal Pradesh",
     destinations: "Dharamshala, Manali, Shimla",
     count: "12+ Destinations",
-    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image :"https://Jatind13.github.io/Assets-at-NavDotDev/ChatGPT%20Image%20Aug%2020%2C%202025%2C%2007_52_30%20PM.png",
     alt: "Himalayan temple in Himachal Pradesh"
   },
   {
     name: "Uttarakhand",
     destinations: "Rishikesh, Haridwar, Kedarnath",
     count: "10+ Destinations",
-    image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image :"https://Jatind13.github.io/Assets-at-NavDotDev/ChatGPT%20Image%20Aug%2020%2C%202025%2C%2008_50_37%20PM.png",
     alt: "Rishikesh on river Ganges in Uttarakhand"
   }
 ];

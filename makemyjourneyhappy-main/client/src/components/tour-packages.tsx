@@ -9,7 +9,7 @@ const packages = [
     icon: Mountain,
     description: "Experience the divine journey of Lord Rama through Ayodhya, Chitrakoot, and other sacred places mentioned in the Ramayana.",
     destinations: "Ayodhya, Chitrakoot, Nasik, Hampi",
-    image: "https://github.com/Jatind13/Assets-at-NavDotDev/blob/29e2b6f8368d24947cc354ef8c8085a0fcaf249e/ChatGPT%20Image%20Aug%2020%2C%202025%2C%2007_43_05%20PM.png",
+    image: "https://jatind13.github.io/Assets-at-NavDotDev/ChatGPT%20Image%20Aug%2020%2C%202025%2C%2008_59_06%20PM.png",
     alt: "Ram temple with traditional architecture"
   },
   {
@@ -17,7 +17,7 @@ const packages = [
     icon: Heart,
     description: "Follow the enlightened path of Buddha through Bodh Gaya, Sarnath, Kushinagar, and other places where he lived and taught.",
     destinations: "Bodh Gaya, Sarnath, Kushinagar, Rajgir",
-    image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+    image: "https://jatind13.github.io/Assets-at-NavDotDev/ChatGPT%20Image%20Aug%2020%2C%202025%2C%2009_02_23%20PM.png",
     alt: "Buddha statue in meditation with lotus",
     popular: true
   },
@@ -26,7 +26,7 @@ const packages = [
     icon: Sun,
     description: "Discover the power of Lord Shiva through the 12 Jyotirlingas and other sacred shrines dedicated to the destroyer and transformer.",
     destinations: "Kashi, Kedarnath, Somnath, Ujjain",
-    image: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+    image: "https://jatind13.github.io/Assets-at-NavDotDev/ChatGPT%20Image%20Aug%2020%2C%202025%2C%2009_05_12%20PM.png",
     alt: "Ancient Shiva temple with intricate carvings"
   }
 ];
