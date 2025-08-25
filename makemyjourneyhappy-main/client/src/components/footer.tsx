@@ -23,7 +23,7 @@ export default function Footer() {
             <p className="text-neutral-300 mb-4">
               Your trusted partner for spiritual and cultural journeys across India. Experience the divine with comfort and authenticity.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
@@ -36,7 +36,7 @@ export default function Footer() {
               <a href="#" className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
                 <Youtube className="h-5 w-5" />
               </a>
-            </div>
+            </div> */}
           </div>
           
           {/* Quick Links */}
@@ -104,15 +104,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center">
                 <span className="text-primary mr-3">📞</span>
-                <span className="text-neutral-300">+91 98765 43210</span>
+                <span className="text-neutral-300">+91 92147 71641</span>
               </div>
               <div className="flex items-center">
                 <span className="text-primary mr-3">✉️</span>
-                <span className="text-neutral-300">info@makemyjourneyhappy.com</span>
+                <span className="text-neutral-300">makemyjourneyhappy.info@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <span className="text-primary mr-3">📍</span>
-                <span className="text-neutral-300">New Delhi, India</span>
+                <span className="text-neutral-300">Varanasi, Uttar Pradesh</span>
               </div>
             </div>
           </div>
@@ -120,9 +120,7 @@ export default function Footer() {
         
         <div className="border-t border-neutral-700 mt-12 pt-8 text-center">
           <p className="text-neutral-300">
-            © 2025 Make My Journey Happy. All rights reserved. | 
-            <a href="#" className="text-primary hover:text-orange-400 transition-colors ml-1">Privacy Policy</a> | 
-            <a href="#" className="text-primary hover:text-orange-400 transition-colors ml-1">Terms of Service</a>
+            © 2025 Make My Journey Happy. All rights reserved. 
           </p>
         </div>
       </div>
